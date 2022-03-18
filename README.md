@@ -74,6 +74,18 @@
     
 }
 ```
- 
+- Tabbar background color 15버전 대응 
+```Swift
+   if #available(iOS 15, *) {
+      let appearance = UITabBarAppearance()
+      let tabBar = UITabBar()
+      appearance.configureWithOpaqueBackground()
+      appearance.backgroundColor = UIColor.white
+      tabBar.standardAppearance = appearance;
+      UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
+```        
+   
+        
  
 
